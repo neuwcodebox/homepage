@@ -65,6 +65,11 @@ const config: Config = {
   themeConfig: {
     navbar: {
       title: 'Home',
+      logo: {
+        alt: 'Logo',
+        src: 'img/logo.svg',
+        width: 24,
+      },
       items: [
         {
           type: 'docSidebar',
@@ -73,6 +78,7 @@ const config: Config = {
           label: 'Docs',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/license', label: 'License', position: 'right' },
       ],
     },
     prism: {
