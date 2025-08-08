@@ -32,6 +32,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Set image tag
+        run: echo "TAG=$(date +%Y%m%d)-${GITHUB_SHA::7}" >> $GITHUB_ENV
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -39,4 +42,4 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/arm64
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/homepage:latest,${{ secrets.DOCKERHUB_USERNAME }}/homepage:$(date +%Y%m%d)-${GITHUB_SHA::7}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/homepage:latest,${{ secrets.DOCKERHUB_USERNAME }}/homepage:${{ env.TAG }}
