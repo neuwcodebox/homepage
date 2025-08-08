@@ -39,4 +39,4 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/arm64
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/homepage:latest,${{ secrets.DOCKERHUB_USERNAME }}/homepage:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/homepage:latest,${{ secrets.DOCKERHUB_USERNAME }}/homepage:$(date +%Y%m%d)-${GITHUB_SHA::7}
