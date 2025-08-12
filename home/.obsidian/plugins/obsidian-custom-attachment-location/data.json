@@ -1,0 +1,25 @@
+{
+  "attachmentFolderPath": "attachments/${noteFolderName}/${noteFileName}",
+  "attachmentRenameMode": "Only pasted images",
+  "collectAttachmentUsedByMultipleNotesMode": "Skip",
+  "customTokensStr": "registerCustomToken('root', () => '/');",
+  "duplicateNameSeparator": " ",
+  "emptyAttachmentFolderBehavior": "DeleteWithEmptyParents",
+  "excludePaths": [],
+  "excludePathsFromAttachmentCollecting": [],
+  "generatedAttachmentFileName": "file-${date:YYYYMMDDHHmmssSSS}",
+  "includePaths": [],
+  "jpegQuality": 0.8,
+  "markdownUrlFormat": "${root}${generatedAttachmentFilePath}",
+  "shouldConvertPastedImagesToJpeg": false,
+  "shouldDeleteOrphanAttachments": true,
+  "shouldRenameAttachmentFiles": false,
+  "shouldRenameAttachmentFolder": true,
+  "shouldRenameCollectedAttachments": false,
+  "specialCharacters": "#^[]|*\\<>:?",
+  "specialCharactersReplacement": "-",
+  "treatAsAttachmentExtensions": [
+    ".excalidraw.md"
+  ],
+  "warningVersion": "9.0.5"
+}

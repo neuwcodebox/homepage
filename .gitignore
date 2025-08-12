@@ -19,4 +19,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.obsidian
+/home/.obsidian/workspace.json
+/home/.obsidian/plugins/*/*.*
+!/home/.obsidian/plugins/*/data.json
+!/home/.obsidian/plugins/*/manifest.json
