@@ -1,14 +1,15 @@
 계획:
 
-1. GET https://random-words-api.kushcreates.com/api?language=en&words=5 호출하여 랜덤한 영어 단어들을 뽑습니다.
-2. 그 중 교육적으로 적절한 영어 단어를 1개 선정합니다.
-3. 해당 영어 단어에 대한 설명을 해당 단어.md의 파일에 작성합니다. (예: apple.md)
-4. git pull, add, commit, push하여 배포합니다.
+1. 명령어로 오늘 날짜를 확인합니다.
+2. GET https://random-words-api.kushcreates.com/api?language=en&words=10 호출하여 랜덤한 영어 단어들을 뽑습니다.
+3. 그 중 중복되지 않고 교육적으로 적절한 영어 단어를 1개 선정합니다.
+4. 해당 영어 단어에 대한 설명을 해당 단어.md의 파일에 작성합니다. (예: apple.md)
+5. git pull, add, commit, push하여 배포합니다.
 
 양식:
 
 ```md
-# <단어>
+# <오늘 날짜> - <단어>
 
 <발음, 품사, 의미, 형태, 예문/숙어, 유의어/관련어, 활용, 어원, 트리비아 등등 교육적으로 유용하고 재밌는 것들>
 
@@ -20,7 +21,7 @@
 예시:
 
 ```md
-# candle
+# 2025-02-12 - candle
 
 * **발음**: /ˈkændl/
 * **품사**: 명사
