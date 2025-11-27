@@ -3,7 +3,7 @@
 1. 명령어로 오늘 날짜를 확인합니다.
 2. GET https://random-words-api.kushcreates.com/api?language=en&words=10 호출하여 랜덤한 영어 단어들을 뽑습니다.
 3. 그 중 중복되지 않고 교육적으로 적절한 영어 단어를 1개 선정합니다.
-4. 해당 영어 단어에 대한 설명을 해당 단어.md의 파일에 작성합니다. (예: apple.md)
+4. 해당 영어 단어에 대한 설명을 해당 <날짜>-<단어>.md의 파일에 작성합니다. (예: 2025-02-12-apple.md)
 5. git pull, add, commit, push하여 배포합니다.
 
 양식:
