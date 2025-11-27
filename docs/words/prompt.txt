@@ -1,0 +1,50 @@
+계획:
+
+1. GET https://random-words-api.kushcreates.com/api?language=en&words=5 호출하여 랜덤한 영어 단어들을 뽑습니다.
+2. 그 중 교육적으로 적절한 영어 단어를 1개 선정합니다.
+3. 해당 영어 단어에 대한 설명을 해당 단어.md의 파일에 작성합니다. (예: apple.md)
+4. git pull, add, commit, push하여 배포합니다.
+
+양식:
+
+```md
+# <단어>
+
+<발음, 품사, 의미, 형태, 예문/숙어, 유의어/관련어, 활용, 어원, 트리비아 등등 교육적으로 유용하고 재밌는 것들>
+
+---
+
+<이 문서는 자동화 된 AI로 작성되었다는 안내 문구>
+```
+
+예시:
+
+```md
+# candle
+
+* **발음**: /ˈkændl/
+* **품사**: 명사
+* **의미**: 양초; (비유) 불빛, 희망의 상징
+* **형태**
+  * 복수: candles
+* **예문**
+  * *She placed a candle on the windowsill to welcome her guest.*  
+    그녀는 손님을 맞이하기 위해 창턱에 양초를 놓았다.
+  * *We lit candles during the memorial service to honour the departed.*  
+    우리는 추모식 동안 고인을 기리기 위해 양초를 켰다.
+  * *In the dark room, the single candle’s flame felt like a beacon of hope.*  
+    어두운 방에서 그 하나의 양초 불꽃이 마치 희망의 등대처럼 느껴졌다.
+* **유의어/관련어**: *wax light*, *candlelight*
+* **활용**:
+  * 주로 물리적인 ‘양초’ 의미로 많이 쓰이고, 종교·기념·로맨틱한 분위기에서 자주 등장합니다.
+  * 동사로는 *to candle* 라는 옛 표현이 ‘양초를 켜다’ 또는 ‘검사하다(check by light)’라는 뜻도 있었으나 현재는 거의 사용되지 않습니다.
+* **트리비아**:
+  * 영어 candle은 라틴어 *candēre* “흰 빛을 내다, 빛나다”에서 유래되었습니다.
+  * 또한 영어 표현 “**burn the candle at both ends**”(양 끝을 태우다)는 지나치게 열심히 하거나 과로하는 상태를 비유적으로 나타냅니다.
+
+---
+
+*이 문서는 자동화 된 AI로 작성되었습니다.*
+```
+
+이제 계획을 따라 작업을 시작해서 오늘의 영어 단어 파일을 한국어로 하나 작성해주세요.
