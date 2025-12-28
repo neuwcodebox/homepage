@@ -6,7 +6,7 @@
 
 ![](/attachments/blog/2025-12-28-disaster-feed/demo.png)
 
-<https://disaster-feed.neuwappbox.com/>
+https://disaster-feed.neuwappbox.com/
 
 백엔드 개발은 초기 프로젝트 설정을 제외하고 코드 작성은 거의 Codex로 했다. 엄청 많이 쓴 거 같은데 주간 사용 한도가 아직 60%나 남음 ㄷㄷ
 
