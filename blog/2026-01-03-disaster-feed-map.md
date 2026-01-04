@@ -4,7 +4,7 @@
 
 <!-- truncate -->
 
-![](attachments/blog/2026-01-03-disaster-feed-map/file-20260103205052669.png)
+![](/attachments/blog/2026-01-03-disaster-feed-map/file-20260103205052669.png)
 
 행정 구역과 함께 지도를 다루는 건 옛날에 산불 지도 만들 때 해봤어서 그리 어렵지 않았다.
 대충 다음과 같은 데이터를 DB에 구축해 놓고 써먹었다.
