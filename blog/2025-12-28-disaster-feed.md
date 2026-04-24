@@ -2,7 +2,7 @@
 
 예전부터 만들까 싶었는데 도저히 심심하지가 않아서(?) 미루다 이번 크리스마스 연휴에 만들었다. ~~크리스마스? 그냥 쉬는 날 아닌가?~~ 흩어진 국내 재난 관련 소식들을 통합해서 (거의) 실시간으로 제공해주는 서비스다.
 
-<!-- truncate -->
+{/* truncate */}
 
 ![demo](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2025-12-28-disaster-feed/demo.png)
 

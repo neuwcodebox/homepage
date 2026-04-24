@@ -5,7 +5,7 @@
 그 이후로 7달이 지났고 저번 글에서 ChatGPT를 구독해서 Codex를 쓸 수 있게 되었다 했다.
 마침 오늘 하루종일 버스를 탔어야 했어서 폰으로 Codex Web을 통해 바이브 코딩을 시도해봤고 꽤 성공적이었다.
 
-<!-- truncate -->
+{/* truncate */}
 
 ![file 20251120205242140](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2025-11-20-starseekers/file-20251120205242140.png)
 

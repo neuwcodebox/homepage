@@ -2,4 +2,4 @@
 
 안녕하세요.
 
-<!-- truncate -->
+{/* truncate */}

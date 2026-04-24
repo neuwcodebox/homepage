@@ -2,7 +2,7 @@
 
 얼마 전에 만들었다고 했던 [재난 현황판](https://disaster-feed.neuwappbox.com/)에 지도를 넣어봤다.
 
-<!-- truncate -->
+{/* truncate */}
 
 ![file 20260103205052669](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2026-01-03-disaster-feed-map/file-20260103205052669.png)
 
