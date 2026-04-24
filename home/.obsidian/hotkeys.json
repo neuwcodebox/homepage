@@ -1,0 +1,11 @@
+{
+  "image-upload-toolkit:publish-page": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "U"
+    }
+  ]
+}
