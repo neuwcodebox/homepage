@@ -7,7 +7,7 @@
 
 <!-- truncate -->
 
-![](/attachments/blog/2025-11-20-starseekers/file-20251120205242140.png)
+![file 20251120205242140](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2025-11-20-starseekers/file-20251120205242140.png)
 
 https://starseekers-web.vercel.app/
 

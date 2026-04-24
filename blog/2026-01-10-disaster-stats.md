@@ -4,9 +4,9 @@
 
 <!-- truncate -->
 
-![](/attachments/blog/2026-01-10-disaster-stats/file-20260110215628273.png)
+![file 20260110215628273](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2026-01-10-disaster-stats/file-20260110215628273.png)
 
-![](/attachments/blog/2026-01-10-disaster-stats/file-20260110215633960.png)
+![file 20260110215633960](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2026-01-10-disaster-stats/file-20260110215633960.png)
 
 화재 출동 건수와 교통 돌발 건수가 비슷한 패턴을 보였다. 공통적으로 낮 시간에 가장 높고 밤부터 새벽까지 가장 낮다.
 

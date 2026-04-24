@@ -17,7 +17,7 @@
 
 이렇게 하면 다음 사진과 같이 된다.
 
-![](/attachments/blog/2025-09-17-galaxy-battery-routine/file-20250917171553656.png)
+![file 20250917171553656](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2025-09-17-galaxy-battery-routine/file-20250917171553656.png)
 
 1. 자기 전에 충전기 꽂아두면 80%까지만 충전된다.
 2. 기상 시간(여기서는 일출 시간) 쯤에 95%까지 충전 제한이 해제된다.

@@ -4,7 +4,7 @@
 
 <!-- truncate -->
 
-![](/attachments/blog/2025-12-28-disaster-feed/demo.png)
+![demo](https://cdn.neuwappbox.com/post/2026/04/24/attachments/blog/2025-12-28-disaster-feed/demo.png)
 
 https://disaster-feed.neuwappbox.com/
 
