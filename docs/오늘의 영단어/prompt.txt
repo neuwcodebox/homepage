@@ -8,6 +8,7 @@
 6. `r2-image-upload <이미지 경로> --prefix docs/today-en-word` 명령어로 이미지를 업로드하여 URL을 획득하고 임시 이미지 파일을 삭제합니다.
 7. 해당 영어 단어에 대한 설명을 이미지와 함께 <날짜>-<단어>.md의 파일에 작성합니다. (예: 2025-02-12-apple.md)
 8. git add, commit, push하여 배포합니다.
+9. `notify send --title "Today's English Word" --body-file "<md 파일 경로>"` 명령어로 알림을 보냅니다.
 
 양식:
 
