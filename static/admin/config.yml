@@ -50,8 +50,8 @@ collections:
         widget: richtext
 
         modes:
-          - raw
           - rich_text
+          - raw
 
         media_libraries:
           - cloudflare_r2
