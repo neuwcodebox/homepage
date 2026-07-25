@@ -47,7 +47,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
-          truncateMarker: /^%%TRUNCATE%%$/m,
+          truncateMarker: /^\{\/\*\s*truncate\s*\*\/\}$|^\[\/\/\]:\s*#\s*\(truncate\)\s*$/m,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,

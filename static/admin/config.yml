@@ -61,6 +61,6 @@ collections:
 
           목록에서 미리 보여줄 내용을 작성하세요.
 
-          %%TRUNCATE%%
+          [//]: # (truncate)
 
           나머지 본문을 작성하세요.
