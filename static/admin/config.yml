@@ -40,46 +40,27 @@ collections:
     delete: true
 
     extension: md
-    format: frontmatter
-
-    identifier_field: title
-    summary: "{{title}}"
+    format: raw
 
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      - name: title
-        label: 제목
-        widget: string
-
-      - name: description
-        label: 설명
-        widget: text
-        required: false
-
-      - name: tags
-        label: 태그
-        widget: list
-        required: false
-
-      - name: draft
-        label: 초안
-        widget: boolean
-        default: true
-        required: false
-
       - name: body
-        label: 본문
+        label: 게시글
         widget: richtext
+
         modes:
           - raw
           - rich_text
+
         media_libraries:
           - cloudflare_r2
+
         default: |
+          # 제목
+
           목록에서 미리 보여줄 내용을 작성하세요.
 
           {/* truncate */}
 
           나머지 본문을 작성하세요.
-        hint: "`{/* truncate */}` 위쪽 내용이 블로그 목록 미리보기에 표시됩니다."
