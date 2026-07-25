@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: neuwcodebox/homepage
+  branch: main
+
+  auth_methods:
+    - token
+
+  commit_messages:
+    create: 'blog: create "{{slug}}"'
+    update: 'blog: update "{{slug}}"'
+    delete: 'blog: delete "{{slug}}"'
+
+locale: ko
+
+media_libraries:
+  cloudflare_r2:
+    account_id: 7e6b354e33a1e4918baa6acd0c698344
+    access_key_id: 430295d5c349d52831dae46397c9429a
+    bucket: home
+    public_url: https://cdn.neuwappbox.com
+    prefix: cms/
+
+field_defaults:
+  richtext:
+    modes:
+      - rich_text
+      - raw
+    use_markdown_shortcuts: true
+
+collections:
+  - name: blog
+    label: 블로그
+    label_singular: 게시글
+
+    folder: blog
+    create: true
+    delete: true
+
+    extension: md
+    format: frontmatter
+
+    identifier_field: title
+    summary: "{{title}}"
+
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+    fields:
+      - name: title
+        label: 제목
+        widget: string
+
+      - name: description
+        label: 설명
+        widget: text
+        required: false
+
+      - name: tags
+        label: 태그
+        widget: list
+        required: false
+
+      - name: draft
+        label: 초안
+        widget: boolean
+        default: true
+        required: false
+
+      - name: body
+        label: 본문
+        widget: richtext
+        modes:
+          - raw
+          - rich_text
+        media_libraries:
+          - cloudflare_r2
+        default: |
+          목록에서 미리 보여줄 내용을 작성하세요.
+
+          {/* truncate */}
+
+          나머지 본문을 작성하세요.
+        hint: "`{/* truncate */}` 위쪽 내용이 블로그 목록 미리보기에 표시됩니다."
