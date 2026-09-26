@@ -6,8 +6,8 @@ import remarkYouTube from './src/remark/youtube.mjs';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'neuwappbox',
-  tagline: '개발 기록과 일상 이야기',
+  title: 'Home',
+  tagline: '잡다구리',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -47,12 +47,12 @@ const config: Config = {
         blog: {
           beforeDefaultRemarkPlugins: [remarkYouTube],
           blogTitle: '블로그',
-          blogDescription: '개발, 기술, 취미와 일상에 관한 neuwappbox의 글입니다.',
+          blogDescription: '잡다한 기록',
           showReadingTime: true,
           truncateMarker: /^\{\/\*\s*truncate\s*\*\/\}$|^\[\/\/\]:\s*#\s*\(truncate\)\s*$/m,
           feedOptions: {
             type: ['rss', 'atom'],
-            description: 'neuwappbox의 개발 기록과 일상 이야기',
+            description: '잡다한 기록',
             xslt: true,
           },
           // Please change this to your repo.
@@ -80,7 +80,7 @@ const config: Config = {
   themeConfig: {
     metadata: [{ name: 'twitter:card', content: 'summary' }],
     navbar: {
-      title: 'neuwappbox',
+      title: 'Home',
       logo: {
         alt: 'Logo',
         src: 'img/logo.svg',
