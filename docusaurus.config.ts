@@ -6,8 +6,8 @@ import remarkYouTube from './src/remark/youtube.mjs';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Home',
-  tagline: 'Nothing here yet',
+  title: 'neuwappbox',
+  tagline: '개발 기록과 일상 이야기',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,10 +15,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
   url: 'https://neuwappbox.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
@@ -49,10 +46,13 @@ const config: Config = {
         },
         blog: {
           beforeDefaultRemarkPlugins: [remarkYouTube],
+          blogTitle: '블로그',
+          blogDescription: '개발, 기술, 취미와 일상에 관한 neuwappbox의 글입니다.',
           showReadingTime: true,
           truncateMarker: /^\{\/\*\s*truncate\s*\*\/\}$|^\[\/\/\]:\s*#\s*\(truncate\)\s*$/m,
           feedOptions: {
             type: ['rss', 'atom'],
+            description: 'neuwappbox의 개발 기록과 일상 이야기',
             xslt: true,
           },
           // Please change this to your repo.
@@ -69,13 +69,18 @@ const config: Config = {
         pages: {
           beforeDefaultRemarkPlugins: [remarkYouTube],
         },
+        sitemap: {
+          changefreq: null,
+          priority: null,
+        },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
+    metadata: [{ name: 'twitter:card', content: 'summary' }],
     navbar: {
-      title: 'Home',
+      title: 'neuwappbox',
       logo: {
         alt: 'Logo',
         src: 'img/logo.svg',
