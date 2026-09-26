@@ -1,6 +1,7 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkYouTube from './src/remark/youtube.mjs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -41,11 +42,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          beforeDefaultRemarkPlugins: [remarkYouTube],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/neuwcodebox/homepage/blob/main/',
         },
         blog: {
+          beforeDefaultRemarkPlugins: [remarkYouTube],
           showReadingTime: true,
           truncateMarker: /^\{\/\*\s*truncate\s*\*\/\}$|^\[\/\/\]:\s*#\s*\(truncate\)\s*$/m,
           feedOptions: {
@@ -62,6 +65,9 @@ const config: Config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        pages: {
+          beforeDefaultRemarkPlugins: [remarkYouTube],
         },
       } satisfies Preset.Options,
     ],
