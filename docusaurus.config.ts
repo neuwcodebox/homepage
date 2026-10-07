@@ -17,6 +17,8 @@ const config: Config = {
 
   url: 'https://neuwappbox.com',
   baseUrl: '/',
+  // Match Nginx directory URLs so sitemap and canonical links avoid redirects.
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
   markdown: {
