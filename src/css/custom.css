@@ -41,3 +41,8 @@
   height: 100%;
   border: 0;
 }
+
+/* Match the classic blog date typography. */
+.doc-date {
+  font-size: 0.9rem;
+}
