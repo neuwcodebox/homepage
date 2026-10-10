@@ -1,6 +1,7 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkDocDate from './src/remark/doc-date.mjs';
 import remarkYouTube from './src/remark/youtube.mjs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -41,6 +42,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [remarkDocDate],
           beforeDefaultRemarkPlugins: [remarkYouTube],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
