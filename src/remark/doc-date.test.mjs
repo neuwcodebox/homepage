@@ -34,11 +34,12 @@ test('places one date below the Markdown title, keeping the title and body uncha
   assert.deepEqual(tree.children, [header, body]);
   assert.equal(header.children[0], heading);
   const dateNode = header.children[1];
-  assert.equal(dateNode.children[0].value, '작성일: ');
-  assert.deepEqual(dateNode.children[1].attributes, [
+  assert.equal(dateNode.children.length, 1);
+  assert.equal(dateNode.children[0].name, 'time');
+  assert.deepEqual(dateNode.children[0].attributes, [
     { type: 'mdxJsxAttribute', name: 'dateTime', value: '2026-06-12' },
   ]);
-  assert.equal(dateNode.children[1].children[0].value, '2026년 6월 12일');
+  assert.equal(dateNode.children[0].children[0].value, '2026년 6월 12일');
 });
 
 test('prepends to content when the theme supplies a front-matter or automatic title', () => {

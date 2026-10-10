@@ -32,7 +32,6 @@ export default function remarkDocDate() {
       name: 'div',
       attributes: [{ type: 'mdxJsxAttribute', name: 'className', value: 'doc-date margin-vert--md' }],
       children: [
-        { type: 'text', value: '작성일: ' },
         {
           type: 'mdxJsxTextElement',
           name: 'time',
