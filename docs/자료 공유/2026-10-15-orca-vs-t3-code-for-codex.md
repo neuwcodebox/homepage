@@ -4,15 +4,15 @@
 
 [Orca](https://github.com/stablyai/orca)와 [T3 Code](https://github.com/pingdotgg/t3code)는 이런 작업을 관리하는 도구입니다. 둘 다 Codex, Claude Code, OpenCode 등 여러 Agent를 지원하며, 저는 Windows + WSL 환경에서 Codex를 연결해 사용했습니다. [앞서 Orca와 Paseo를 비교한 글](./2026-08-18-orca-vs-paseo-for-codex.md)에 이어, 이번에는 T3 Code와의 차이를 정리했습니다.
 
-직접 사용해 보니 **T3 Code는 가볍고 대화와 작업을 정리하기 편했고, Orca는 파일을 살펴보며 작업을 이어가기 편했습니다.** 같은 Agent를 사용하더라도 어느 쪽이 더 잘 맞는지는 사람이 코드를 확인하고 수정하는 방식에 따라 달라집니다.
+T3 Code에서 먼저 느낀 차이는 가벼움과 깔끔한 Chat UI였습니다. 진행 중인 작업과 제가 확인할 작업을 구분하고, 끝난 대화를 정리하는 방식도 좋았습니다. 다만 작업 결과를 확인하는 화면이나 CLI 명령을 다루는 부분에는 아쉬움이 있었습니다.
 
 | 비교 기준 | Orca | T3 Code |
 | --- | --- | --- |
 | 작업 구성 | Worktree 안에 Agent와 개발 도구를 함께 배치 | 프로젝트별 대화와 작업 상태 중심 |
 | 병렬 작업 | Worktree로 작업 공간 분리 | 별도 branch·worktree 지원 |
-| 파일 확인 | 에디터 옆의 별도 탐색기로 파일 이동 | 탐색기와 열린 파일을 탭으로 전환 |
+| 결과 확인 | 에디터·diff·브라우저를 작업 공간에 함께 구성 | 우측 패널에서 파일과 diff 확인 |
 | WSL | Windows 앱에서 연결 가능 | Windows 앱에서 연결 가능 |
-| 직접 느낀 장점 | 파일 탐색과 검토 동선 | 가벼운 느낌, 깔끔한 Chat UI와 Settle |
+| 사용감 | 여러 도구가 한곳에 모여 있지만 비교적 무거움 | 가벼운 느낌, 깔끔한 Chat UI와 Settle |
 
 ## 작업 공간을 관리하는 Orca, 대화를 정리하기 편한 T3 Code
 
@@ -28,29 +28,29 @@ Orca에도 [구조화된 Chat UI](https://www.onorca.dev/docs/agents/native-chat
 
 다만 CLI에서 쓰던 명령이 그대로 통하는 것은 아니었습니다. T3 Code에 `/goal`을 입력했지만 명령으로 인식되지 않았고, 일단 Codex가 뜻을 알아듣길 기대하며 사용했습니다. 개발 중인 [goal 연동](https://github.com/pingdotgg/t3code/blob/main/docs/internals/providers.md)이 실제 UI에 반영되면 이 부분은 나아질 여지가 있습니다.
 
-## 파일을 직접 확인할 때는 Orca의 구성이 편했습니다
+## 결과를 확인하는 화면은 조금 아쉬웠습니다
 
-Agent가 결과를 내놓으면 바뀐 파일뿐 아니라 주변 코드도 살펴보게 됩니다. 여러 파일을 오가며 구현을 확인하고, 필요한 부분을 다시 수정하도록 요청하는 과정입니다. 이때는 작은 화면 구성 차이가 반복해서 영향을 줍니다.
+Agent에게 작업을 맡기고 나면 어떤 파일이 바뀌었는지, 요청한 대로 수정했는지 간단히 확인하게 됩니다. 이때마다 IDE로 이동하지 않고 대화 옆에서 바로 볼 수 있으면 편합니다.
 
-Orca는 파일 탐색기가 에디터 옆에 따로 남아 있습니다. 한 파일을 보다가 다른 파일을 확인하려면 옆의 탐색기에서 바로 열면 됩니다. 반면 제가 사용한 T3 Code에서는 탐색기와 열어 둔 파일이 같은 탭 목록에 나란히 놓였습니다. 다른 파일을 찾으려면 탐색기 탭부터 다시 찾아야 했고, 탭을 선택하려다 가까이 있는 닫기 버튼을 잘못 누르기도 쉬웠습니다.
+T3 Code는 파일 탐색뿐 아니라 diff도 우측 사이드 패널에서 확인합니다. 대화 화면 옆의 한정된 공간에서 파일과 변경 내용을 봐야 하니 좁게 느껴졌습니다. 기능이 빠져 있다기보다 결과를 확인하는 공간이 답답한 쪽에 가까웠습니다.
 
-이 동선이 번거로워 결국 T3 Code를 쓰다가 VS Code를 다시 열었습니다. 채팅으로 작업을 맡기는 동안에는 편했지만, 파일 탐색까지 T3 Code 안에서 계속하기는 불편했습니다.
+탭 구성도 이 불편을 더했습니다. 탐색기와 열어 둔 파일이 같은 탭 목록에 놓여 있어, 다른 파일을 찾으려면 탐색기 탭부터 다시 찾아야 했습니다. 탭을 선택하려다 가까이 있는 닫기 버튼을 잘못 누르기도 쉬웠습니다. 결국 파일을 더 살펴볼 때는 VS Code를 다시 열었습니다.
 
-T3 Code에 편집 기능이 없는 것은 아닙니다. 파일 편집과 저장은 물론 [diff 확인, commit·push·PR](https://github.com/pingdotgg/t3code/blob/main/docs/user/source-control.md)도 지원합니다. 다만 기능이 있다는 것과 여러 파일을 반복해서 확인하기 편하다는 것은 별개였습니다.
+이런 간단한 확인은 Orca가 상대적으로 편했습니다. 파일 탐색기가 에디터 옆에 따로 남아 있어 다른 파일로 이동하기 쉬웠습니다. Agent가 한 일을 잠깐 살펴보고 다시 지시할 때는 이런 작은 차이가 편의성에 영향을 줍니다.
 
-Orca는 [Monaco 기반 에디터](https://www.onorca.dev/docs/editing/monaco)와 [줄별 diff 의견을 Agent에게 보내는 기능](https://www.onorca.dev/docs/review/annotate-ai-diff)을 제공합니다. 프론트엔드 작업이라면 내장 Chromium의 [Design Mode](https://www.onorca.dev/docs/browser/design-mode)로 화면 요소의 HTML, CSS와 스크린샷을 전달할 수도 있습니다. 파일을 살펴보고, 수정할 부분을 짚고, 실행 결과를 확인하는 작업을 같은 공간에서 이어가기 위한 구성입니다.
+양쪽 모두 결과를 확인하고 다음 작업으로 이어가는 기능은 제공합니다. T3 Code는 [diff 확인과 commit·push·PR](https://github.com/pingdotgg/t3code/blob/main/docs/user/source-control.md)을 지원합니다. Orca에는 [diff의 특정 줄에 의견을 남겨 Agent에게 보내는 기능](https://www.onorca.dev/docs/review/annotate-ai-diff)이 있고, 내장 브라우저의 [Design Mode](https://www.onorca.dev/docs/browser/design-mode)로 화면 요소와 관련 정보를 전달할 수도 있습니다.
 
-## 기존 IDE와 함께 쓸지에 따라 선택이 달라집니다
+## 중요한 것은 Agent 작업을 관리하기 편한가입니다
 
-기존 VS Code를 계속 사용하면서 Agent 작업을 가볍게 관리하고 싶다면 T3 Code가 잘 맞습니다. 대화와 작업 상태를 T3 Code에서 확인하고, 파일을 자세히 탐색하거나 편집할 때는 익숙한 IDE를 사용하는 방식입니다. 제 경우에도 깔끔한 Chat UI와 Settle은 장점으로 남았습니다.
+T3 Code는 가볍게 대화하고 작업 상태를 정리하는 흐름이 좋았습니다. 우측 패널과 일부 명령 처리에는 아쉬움이 있지만, 여러 Agent의 작업을 관리하는 도구로서 장점은 분명했습니다.
 
-반대로 Agent가 만든 코드를 직접 자주 살펴보고, 파일 편집과 diff 검토, 브라우저 확인까지 한 프로그램에서 이어가고 싶다면 Orca가 더 잘 맞습니다. 여러 worktree에 필요한 도구를 함께 두는 구성이 유용하고, 저는 별도 파일 탐색기가 있는 것부터 편했습니다.
+Orca는 worktree마다 Agent와 터미널, 브라우저 같은 도구를 함께 두는 구성이 특징입니다. 작업에 필요한 도구를 한곳에 모아 쓰고 싶다면 살펴볼 만합니다. 다만 기능이 많다는 이유만으로 더 좋은 선택이 되는 것은 아닙니다. 실제로 쓰는 기능인지, 그만큼의 무게를 감수할 만한지가 중요합니다.
 
 제가 사용하는 Windows + WSL 환경에서는 두 프로그램 모두 연결이 편했습니다. [Orca](https://www.onorca.dev/docs/agents/codex)와 [T3 Code](https://github.com/pingdotgg/t3code/blob/main/docs/user/install.md) 모두 WSL 환경을 지원하므로 기존 저장소와 개발 도구를 그대로 활용할 수 있습니다. 공식 문서상 [Orca의 원격 작업](https://www.onorca.dev/docs/ssh)·[모바일](https://www.onorca.dev/docs/mobile), [T3 Code의 원격 연결](https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md)도 지원합니다. 이 경우에는 Agent가 실행되는 호스트가 켜져 있고 연결 가능해야 합니다.
 
 완성도도 함께 봐야 합니다. Orca는 Native Chat을 실험적 기능으로 안내하고, T3 Code도 아직 초기 프로젝트이며 버그가 있을 수 있다고 설명합니다. 필요한 기능이 있더라도 실제 작업에서 안정적으로 쓸 수 있는지는 확인이 필요합니다.
 
-따라서 선택할 때는 **Agent에게 일을 맡기는 순간부터 결과를 직접 확인하는 과정까지** 이어서 사용해 보는 것이 좋습니다. T3 Code의 가벼움과 작업 정리 방식이 잘 맞는지, Orca의 통합된 개발 환경이 필요한지 확인하면 자신의 작업 방식에 맞는 쪽을 고르기 쉬워집니다.
+직접 써보니 T3 Code는 가벼움과 작업 정리 방식이 좋았고, 우측 패널처럼 자주 쓰는 화면은 더 다듬어졌으면 했습니다. Orca는 작업별로 여러 도구를 함께 두는 구성이 특징이지만 상대적으로 무겁게 느껴졌습니다. 평소 쓰는 IDE는 유지하면서, **Agent에게 일을 맡기고 진행 상황을 확인하고 결과를 정리하는 흐름**이 자신에게 맞는지 살펴보면 좋겠습니다.
 
 ---
 
