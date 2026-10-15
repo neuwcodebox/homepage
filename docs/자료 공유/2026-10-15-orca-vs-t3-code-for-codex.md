@@ -1,4 +1,4 @@
-# Codex 작업 도구 Orca vs T3 Code, 채팅이 편한 것과 개발이 편한 것은 다르다
+# Orca 쓰다가 T3 Code도 써봤다
 
 [앞서 Orca와 Paseo를 비교하면서](./2026-08-18-orca-vs-paseo-for-codex.md) 여러 Codex 작업을 한곳에서 관리하는 방법을 살펴봤습니다. 이번에는 [Orca](https://github.com/stablyai/orca)와 [T3 Code](https://github.com/pingdotgg/t3code)를 비교해 봤습니다.
 
