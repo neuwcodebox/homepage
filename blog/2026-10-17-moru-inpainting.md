@@ -6,11 +6,11 @@
 
 기존에는 생성된 이미지에서 수정 버튼을 누르면 프롬프트를 생으로 수정하는 거였는데, 여기서 인페인팅을 해볼 수 있게 바꿨다.
 
-![](blog/assets/2026-10-17-moru-inpainting/file-20261017212028210.png)
+![file 20261017212028210](https://cdn.neuwappbox.com/post/2026/10/17/blog/assets/2026-10-17-moru-inpainting/file-20261017212028210.png)
 
 바꾸고 싶은 영역을 칠한 후 무엇을 어떻게 바꿔달라고 적은 다음 생성 버튼을 누르면 된다.
 
-![](blog/assets/2026-10-17-moru-inpainting/2frame_animation.webp)
+![2frame animation](https://cdn.neuwappbox.com/post/2026/10/17/blog/assets/2026-10-17-moru-inpainting/2frame_animation.webp)
 
 보면 알겠지만 칠한 부분 안쪽만 바뀌었다. 물론 안경만 없에달라고 한 거 치고는 눈매나 입꼬리가 달라진 게 좀 그렇긴 한데 쩔수없.
 
